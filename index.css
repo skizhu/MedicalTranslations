@@ -1,0 +1,118 @@
+:root {
+    --bg: #F2F4FF;
+    --red: #ED474A;
+    --darkBlue: #13293D;
+    --lightBlue: #677DB7;
+    --yellow: #F8C630
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--darkBlue);
+    margin: 0;
+    transition: 2s;
+    -webkit-animation: fadein 1.5s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.5s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 1.5s;
+    /* Internet Explorer */
+    -o-animation: fadein 1.5s;
+    /* Opera < 12.1 */
+    animation: fadein 1.5s;
+}
+
+.copyrightContainer {
+    position: fixed;
+    left: 50%;
+    bottom: 0.2rem;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
+.copyrightContainerText {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.optionsContainer {
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+.phraseOptionsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.languageOptionsContainer {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outputContainer {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#originalEnglishTextSpan,
+#translatedTextSpan {
+    color: #ED474A;
+}
+
+#originalEnglishTextSpan,
+#translatedTextSpan,
+#originalEnglishText,
+#translatedText {
+    font-size: 2em;
+}
