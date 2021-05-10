@@ -1,10 +1,13 @@
-const HINDI = {
-    'turn on your left side': 'अपनी बाईं ओर मुड़ें',
-    'turn on your right side': 'अपनी दाईं ओर मुड़ें',
-    'are you comfortable?': 'क्या आप आराम से हैं?',
-    'does it hurt?': 'दर्द हो रहा है क्या?',
-    'this is a test': 'यह टेस्ट है',
+
+
+const FRENCH = {
+    'turn on your left side': 'Tourne sur ton côté gauche',
+    'turn on your right side': 'Tourne sur ton côté droit',
+    'are you comfortable?': 'Es-tu installé confortablement?',
+    'does it hurt?': 'Est-ce que ça fait mal?',
+    'this is a test': "C'est un test",
 }
+
 const SPANISH = {
     'turn on your left side': 'Gira a tu izquierda',
     'turn on your right side': 'Gira a tu derecha',
@@ -13,9 +16,36 @@ const SPANISH = {
     'this is a test': 'Esto es una prueba',
 }
 
+const MANDARIN = {
+    'turn on your left side': '打开你的左边',
+    'turn on your right side': '打开你的右边',
+    'are you comfortable?': '你舒服吗？',
+    'does it hurt?': '疼吗?',
+    'this is a test': '这是一个测试',
+}
+
+const HINDI = {
+    'turn on your left side': 'अपनी बाईं ओर मुड़ें',
+    'turn on your right side': 'अपनी दाईं ओर मुड़ें',
+    'are you comfortable?': 'क्या आप आराम से हैं?',
+    'does it hurt?': 'दर्द हो रहा है क्या?',
+    'this is a test': 'यह टेस्ट है',
+}
+
+const BELARUSIAN = {
+    'turn on your left side': 'Павярніцеся на левы бок',
+    'turn on your right side': 'Павярніцеся на правы бок',
+    'are you comfortable?': 'Вам зручна?',
+    'does it hurt?': 'Ці балюча?',
+    'this is a test': 'Гэта тэст',
+}
+
 const allTranslations = {
-    'HINDI': HINDI,
+    'FRENCH': FRENCH,
     'SPANISH': SPANISH,
+    'MANDARIN': MANDARIN,
+    'HINDI': HINDI,
+    'BELARUSIAN': BELARUSIAN,
 }
 
 window.onload = () => {
