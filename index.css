@@ -138,16 +138,43 @@ body {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
         font-size: 0.2em;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .optionsContainer {
+        margin: 0 auto;
+        margin-top: 2em;
+        position: relative;
+        left: calc((100% / 5))
     }
 
     #phraseOptionsContainer {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 100%;
         grid-template-rows: 1fr;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
     }
 
     .languageOptionsContainer {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        left: calc((100% / 4.5))
+    }
+
+    .outputContainer {
+        margin-top: -2.6em;
+        margin-bottom: 1.4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     #originalEnglishTextSpan,
