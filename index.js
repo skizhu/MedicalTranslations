@@ -23,11 +23,55 @@ window.onload = () => {
     const location = document.getElementById('copyrightText');
     location.textContent = 'Copyright © Zachary Gopinath ' + currentYear;
 
-    const div = document.getElementById('btn-toolbar-id');
-    const descendants = div.getElementsByTagName('*');
-    for (let i = 0; i < 20; i++) {
-        const button = descendants[i];
-        //button.id.length ? document.getElementById(button.id).onclick = phraseButtonOnclick() : null
+    let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    if (width <= 820) {
+        document.getElementById('button-groupOne').classList.remove('btn-group-lg');
+        document.getElementById('button-groupOne').classList.add('btn-group-sm');
+        document.getElementById('button-groupTwo').classList.remove('btn-group-lg');
+        document.getElementById('button-groupTwo').classList.add('btn-group-sm');
+        document.getElementById('button-groupThree').classList.remove('btn-group-lg');
+        document.getElementById('button-groupThree').classList.add('btn-group-sm');
+        document.getElementById('button-groupFour').classList.remove('btn-group-lg');
+        document.getElementById('button-groupFour').classList.add('btn-group-sm');
+        document.getElementById('button-groupLanguages').classList.remove('btn-group-lg');
+        document.getElementById('button-groupLanguages').classList.add('btn-group-sm');
+
+        let nodes = document.getElementById('button-groupOne').childNodes;
+        for (let i = 0; i < nodes.length; i++) {
+            if (nodes[i].classList != null || nodes[i].classList != undefined) {
+                nodes[i].classList.add('btn-sm')
+            }
+        }
+        nodes = document.getElementById('button-groupTwo').childNodes;
+        for (let i = 0; i < nodes.length; i++) {
+            if (nodes[i].classList != null || nodes[i].classList != undefined) {
+                nodes[i].classList.add('btn-sm')
+            }
+        }
+        nodes = document.getElementById('button-groupThree').childNodes;
+        for (let i = 0; i < nodes.length; i++) {
+            if (nodes[i].classList != null || nodes[i].classList != undefined) {
+                nodes[i].classList.add('btn-sm')
+            }
+        }
+        nodes = document.getElementById('button-groupFour').childNodes;
+        for (let i = 0; i < nodes.length; i++) {
+            if (nodes[i].classList != null || nodes[i].classList != undefined) {
+                nodes[i].classList.add('btn-sm')
+            }
+        }
+        let langNodes = document.getElementById('button-groupLanguages').childNodes;
+        for (let i = 0; i < langNodes.length; i++) {
+            if (langNodes[i].classList != null || langNodes[i].classList != undefined) {
+                langNodes[i].classList.add('btn-sm')
+            }
+        }
+        document.getElementById('FR').innerHTML = 'FR'
+        document.getElementById('ES').innerHTML = 'ES'
+        document.getElementById('ZH').innerHTML = 'ZH'
+        document.getElementById('HI').innerHTML = 'HI'
+        document.getElementById('BE').innerHTML = 'BE'
+        document.getElementById('copyrightContainer').style.position = 'relative'
     }
 }
 
@@ -63,16 +107,16 @@ function languageButtonOnclick(val, context) {
         nodes[i].nodeName.toLowerCase() === 'button' ? nodes[i].style.backgroundColor = '#714cfe' : null
     }
     context.style.backgroundColor = '#03dac6';
+    document.getElementById('translatedText').textContent = getTranslation(val)
+}
 
-    const languageObj = allTranslations[val.toUpperCase()];
-
+const getTranslation = (lang) => {
+    const languageObj = allTranslations[lang.toUpperCase()];
     const untranslatedText = document.getElementById('originalEnglishText').textContent.toLowerCase();
     if (languageObj[untranslatedText].length) {
-        document.getElementById('translatedText').textContent = (languageObj[untranslatedText])
+        return languageObj[untranslatedText]
     }
     else {
-        document.getElementById('translatedText').textContent = 'No Translation Available';
+        return 'No Translation Available'
     }
-
-
 }
